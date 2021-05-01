@@ -1,0 +1,108 @@
+.pageTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70vh;
+  animation: slideInLeft 1s forwards;
+}
+.pageTwo_text {
+  display: flex;
+}
+.pageTwo_text p {
+  font-size: 1.375rem;
+}
+
+.pageTwo_button {
+  width: 70vh;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.pageTwo_button button {
+  font-size: 1.375rem;
+  color: #fe6201;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.pageTwo_button button:hover {
+  background: #fe6201;
+  color: white;
+  border-radius: 5px;
+}
+/*=======================
+    Animation SlideInLeft
+=========================*/
+
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+/*==================
+  Media queries
+====================*/
+
+@media screen and (max-width: 1300px) {
+  .pageTwo {
+    min-height: 100vh;
+    height: auto;
+  }
+  .pageTwo img {
+    width: 100%;
+  }
+  .pageTwo_text p {
+    font-size: 2rem;
+  }
+  .pageTwo_button {
+    width: auto;
+  }
+  .pageTwo_button button {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .pageTwo {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+  }
+  .pageTwo img {
+    width: 100%;
+    margin-left: 0;
+  }
+  .pageTwo_text p {
+    font-size: 0.9375rem;
+  }
+
+  .pageTwo_button {
+    width: auto;
+  }
+  .pageTwo_button button {
+    font-size: 1.375rem;
+  }
+}

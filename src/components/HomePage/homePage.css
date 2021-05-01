@@ -1,0 +1,110 @@
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70vh;
+  animation: zoomIn 1.5s forwards;
+}
+.homePage img {
+  margin-left: 100px;
+}
+
+.homePage_text {
+  display: flex;
+}
+.homePage_text p {
+  font-size: 1.375rem;
+}
+
+.homePage_button {
+  width: 70vh;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.homePage_button button {
+  font-size: 1.375rem;
+  color: #fe6201;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.homePage_button button:hover {
+  background: #fe6201;
+  color: white;
+  border-radius: 5px;
+}
+/* =================
+    Animation ZoomIn
+=====================*/
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+.animate__zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/*==================
+  Media queries
+====================*/
+
+@media screen and (max-width: 1300px) {
+  .homePage {
+    min-height: 100vh;
+    height: auto;
+  }
+  .homePage img {
+    width: 100%;
+  }
+  .homePage_text p {
+    font-size: 2rem;
+  }
+  .homePage_button {
+    width: auto;
+  }
+  .homePage_button button {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 990px) {
+  .homePage {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+  }
+  .homePage img {
+    width: 100%;
+    margin-left: 0;
+  }
+  .homePage_text p {
+    font-size: 0.9375rem;
+  }
+
+  .homePage_button {
+    width: auto;
+  }
+  .homePage_button button {
+    font-size: 1.375rem;
+  }
+}

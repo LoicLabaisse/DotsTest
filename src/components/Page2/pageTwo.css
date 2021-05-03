@@ -4,6 +4,10 @@
   align-items: center;
   width: 70vh;
   animation: slideInLeft 1s forwards;
+ 
+}
+.pageTwo img{
+  width: 65vh;
 }
 .pageTwo_text {
   display: flex;
